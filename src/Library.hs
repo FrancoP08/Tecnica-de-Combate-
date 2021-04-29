@@ -1,9 +1,12 @@
 module Library where
 import PdePreludat
-type Poder = Number  
+ 
+  
+-- Parte 1 del Ejercicio 
 
-double :: Number -> Number
-double = (*2)
+
+presionDelGolpe :: Horas -> Objetivo -> Number
+presionDelGolpe horasDeEntrenamiento nombreDelObjetivo = poderDelGolpe horasDeEntrenamiento / fortalezaDelObjetivo nombreDelObjetivo
 
 type Horas = Number
 
@@ -15,9 +18,8 @@ type Objetivo = String
 fortalezaDelObjetivo :: Objetivo -> Number
 fortalezaDelObjetivo = (*2).length
 
-presionDelGolpe :: Horas -> Objetivo -> Number
-presionDelGolpe horasDeEntrenamiento nombreDelObjetivo = poderDelGolpe horasDeEntrenamiento / fortalezaDelObjetivo nombreDelObjetivo
 
+-- Parte 2 del Ejercicio 
 
 
 type Golpe = Objetivo -> Number
@@ -28,6 +30,8 @@ tecnicaGomuGomu = presionDelGolpe 180
 tecnicaGolpesConsecutivos :: Golpe
 tecnicaGolpesConsecutivos = presionDelGolpe 240
 
+
+-- Parte 3 del Ejercicio 
 
 
 objetivoEsDificil :: Objetivo -> Bool
